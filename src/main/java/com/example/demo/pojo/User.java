@@ -1,15 +1,17 @@
 package com.example.demo.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-import com.alibaba.fastjson.annotation.JSONField;
+public class User implements Serializable {
 
-public class User {
-	private String username;
-	private String userpwd;
-	private String userid;
-	@JSONField(format = "yyyy-MM-dd")
-	private Date createDate;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -19,27 +21,30 @@ public class User {
 		this.username = username;
 	}
 
-	public Date getCreateDate() {
-		return createDate;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getUserpwd() {
-		return userpwd;
+	public Date getBirthday() {
+		return birthday;
 	}
 
-	public void setUserpwd(String userpwd) {
-		this.userpwd = userpwd;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
-	public String getUserid() {
-		return userid;
-	}
+	private static final long serialVersionUID = -6249397911566315813L;
 
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
+	private Integer id;
+
+	private String username;
+
+	private String password;
+
+	private Date birthday;
+
 }

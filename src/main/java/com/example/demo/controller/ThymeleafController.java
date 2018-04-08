@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.Date;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
@@ -23,10 +22,10 @@ public class ThymeleafController {
 	@ResponseBody
 	public User user() {
 		User user = new User();
-		user.setUserid("1");
-		user.setUsername("xiaowang");
-		user.setUserpwd("xiaowang");
-		user.setCreateDate(new Date());
+		// user.setUserid("1");
+		// user.setUsername("xiaowang");
+		// user.setUserpwd("xiaowang");
+		// user.setCreateDate(new Date());
 		return user;
 	}
 }
